@@ -1,12 +1,9 @@
 header {
   position: relative;
-  padding: 35px;
+  background-color: $color-01;
   margin-bottom: 5rem;
-  nav {
-    background-color: $color-01;
-    border-radius: 50px;
-    height: 80px;
-    padding: 35px;
+  nav { 
+    height: 80px; 
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -14,8 +11,26 @@ header {
       letter-spacing: 0.5px;
       color: #fff;
       font-size: 28px;
-      font-weight: 600;
+      font-weight: 700;
       font-family: 'Syne', sans-serif;
+    }
+
+    ul {
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-left: -100px;
+    }
+
+    .right_social {
+        a:first-child  {
+            color: #fff;
+            background-color:$color-02;
+            padding: 8px 25px;
+            border-radius: 5px;
+        }
     }
   }
 }

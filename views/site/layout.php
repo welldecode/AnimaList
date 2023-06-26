@@ -16,7 +16,11 @@
         <h1>AnimaList</h1>
         <ul>
           <li><a href="#">Inicio</a></li>
+          <li><a href="#">Social</a></li>
         </ul>
+        <div class="right_social">
+          <a href="#">Login</a>
+        </div>
       </nav>
     </div>
   </header>
