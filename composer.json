@@ -1,0 +1,17 @@
+{
+    "name": "welli/anima-list-php",
+    "description": "AnimaList",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "welldecode",
+            "email": "wellingtonalfredo550@gmail.com"
+        }
+    ],
+    "require": {}
+}
