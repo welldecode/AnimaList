@@ -24,17 +24,12 @@ footer, header, hgroup, menu, nav, section {
 }
 * {
 	box-sizing: border-box;
-}
-body {
-    line-height: 150%;
-		font-family: bely, serif;
-		font-weight: 400;
-		color: #707070;
-}
+} 
 ol, ul {
 	list-style: none;
 }
 a {
+	color: $color-04;
     text-decoration: none;
 }
 blockquote, q {
@@ -63,17 +58,11 @@ body {
 strong {
 	font-weight: 700;
 }
-
-:root {
-	font-size: 20px;
-	@media(max-width: 1440px) {
-			font-size: 18px;
-	}
-	@media(max-width: 768px) {
-		font-size: 15px;
-	}
+ 
+html {
+	
+	scroll-behavior: smooth;
 }
-
 body {
 	opacity: 1;
 	transition: all .7s;

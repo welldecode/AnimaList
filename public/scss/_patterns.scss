@@ -1,0 +1,27 @@
+header {
+  position: relative;
+  padding: 35px;
+  margin-bottom: 5rem;
+  nav {
+    background-color: $color-01;
+    border-radius: 50px;
+    height: 80px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    h1 {
+      letter-spacing: 0.5px;
+      color: #fff;
+      font-size: 28px;
+      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+    }
+  }
+}
+
+.container {
+  width: unquote('min(100% - 20px, 1480px)');
+  margin-inline: auto;
+  position: relative;
+}

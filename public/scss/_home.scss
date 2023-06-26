@@ -1,0 +1,37 @@
+.top_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin:0 0 15rem 0;
+  h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: $color-01; 
+    text-align: center;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    color: #5a6270;
+    width:40%;
+    text-align: center;
+  }
+}
+.titles {
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #333841;
+  }
+  h2 {
+    font-size: 16px;
+    color: #5b6370;
+    font-weight: 500;
+  }
+}
