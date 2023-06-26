@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $this->getTitlePage(); ?></title>
   <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/css/libs.css">
 </head>
 
 <body>
@@ -27,6 +28,7 @@
   </header>
   <?php echo $this->viewContent(); ?>
 
+  <script src="public/js/libs.js"></script>
+  <script src="public/js/main.js"></script>
 </body>
-
 </html>

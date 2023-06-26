@@ -14,7 +14,7 @@ class Image
             return file_get_contents(self::pathCache($imagePath));
         }
 
-        $path = dirname(__FILE__, 3);
+        $path = dirname(__FILE__, 2);
 
         $img = new Imagick($path . "/public/uploads/" . $imagePath);
 
@@ -38,7 +38,7 @@ class Image
 
     private static function pathCache(string $image_name)
     {
-        $path = dirname(__FILE__, 3);
+        $path = dirname(__FILE__,2);
         return "$path/public/cache/$image_name";
     }
 }

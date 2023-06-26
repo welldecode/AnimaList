@@ -35,9 +35,36 @@ function minJS() {
 }
 gulp.task("minjs", minJS);
  
+function pluginJS() {
+  return gulp
+    .src([ 
+      "libs/splide/splide.min.js",  
+    ])
+    .pipe(concat("libs.js"))
+    .pipe(gulp.dest("public/js/"))
+    .pipe(browserSync.stream());
+}
+gulp.task("libsjs", pluginJS);
+
+function pluginCSS() {
+  return gulp
+  .src([
+    'libs/splide/splide.min.css',
+    'libs/splide/splide-core.min.css',
+ 
+  ])
+  .pipe(concat('libs.css'))
+  .pipe(gulp.dest('public/css/'))
+  .pipe(browserSync.stream());
+}
+gulp.task('libscss', pluginCSS);
+
+
 function watch() {
   gulp.watch("./public/scss/*.scss", minSass);
-  gulp.watch("assets/js/*.js", minJS);
+  gulp.watch("public/js/*.js", minJS); 
+  gulp.watch('libs/**/*.js' , pluginJS);
+  gulp.watch('libs/**/*.css' , pluginCSS);
   gulp.watch(["*.html"]).on("change", browserSync.reload);
 }
 gulp.task("watch", watch);
@@ -53,5 +80,5 @@ function browser() {
 gulp.task("browser-sync", browser);
 gulp.task(
   "default",
-  gulp.parallel("watch", "browser-sync",  "minjs", "minsass")
+  gulp.parallel("watch", "browser-sync", "libscss", "libsjs", "minjs", "minsass")
 );
