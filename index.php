@@ -3,8 +3,7 @@
 use core\Router\Router;
 use core\Router\Dispatcher;
 
-require './vendor/autoload.php';
-
+require './vendor/autoload.php'; 
 session_start();
 ini_set('display_errors', 1);
 
@@ -20,6 +19,6 @@ $dispatcher->dispatch(function (array $params, array|Closure $action) use ($disp
     $controlerClass = '\\app\\controllers\\site\\' . ucfirst($action[0]) . 'Controller';
  
     $controller = new $controlerClass($action[1], $params);
-    var_dump($controller);
+ 
     $controller->init($action[1], $params);
 });

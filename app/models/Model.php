@@ -10,17 +10,16 @@ abstract class Model
 {
   protected static string $table;
 
-  public static function all(string $fields = '*', int $limit = 12,  string $order = 'ASC', array $type = ['scan', 'original'])
+  public static function all(string $fields = '*', int $limit = 12,  string $order = 'ASC')
   {
     try {
       Transaction::open();
 
       $conn = Transaction::getConnection();
       $tableName = static::$table;
+ 
 
-      $where = sprintf("('%s')", implode("','", $type));
-
-      $query = $conn->prepare("select {$fields} from {$tableName} WHERE format IN {$where} ORDER BY ID {$order} LIMIT {$limit}");
+      $query = $conn->prepare("select {$fields} from {$tableName} LIMIT {$limit}");
 
       $query->execute();
 

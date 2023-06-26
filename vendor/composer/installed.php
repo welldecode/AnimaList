@@ -3,7 +3,7 @@
         'name' => 'welli/anima-list-php',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '7b28f45d814316d46e3b8e8725362de5989b9b43',
+        'reference' => 'be03c5fea5b15c9da81c909034721edeb4c86f36',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -67,7 +67,7 @@
         'welli/anima-list-php' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '7b28f45d814316d46e3b8e8725362de5989b9b43',
+            'reference' => 'be03c5fea5b15c9da81c909034721edeb4c86f36',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

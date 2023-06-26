@@ -15,5 +15,9 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^5.5"
-    }
+    },"config": {
+        "platform":{
+          "ext-imagick": "3.4.4"
+          }
+      }
 }
