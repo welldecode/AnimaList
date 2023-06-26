@@ -2,14 +2,16 @@
 
 namespace app\controllers\site;
 
-use  core\Controller;
+use core\View;
+use core\Controller; 
+use app\models\Anime;
 
 class HomeController extends Controller
 {
-  
-    public function index(array $params)
+
+    public function index( )
     { 
         $this->view->setPageTitle('Página Inicial');
+        $this->view->trending_now = Anime::all('value');
     }
-
 }

@@ -8,15 +8,18 @@ require './vendor/autoload.php';
 session_start();
 ini_set('display_errors', 1);
 
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__, 1));
+$dotenv->load();
+ 
 $router = new Router;
 require('./config/routes.php');
 
 $dispatcher = new Dispatcher($router);
 $dispatcher->dispatch(function (array $params, array|Closure $action) use ($dispatcher) {
-
-    $controllerFileName = ucfirst($action[0]) . 'Controller';
-    $controlerClass = '\\app\\controllers\\site\\' . $controllerFileName;
+ 
+    $controlerClass = '\\app\\controllers\\site\\' . ucfirst($action[0]) . 'Controller';
  
     $controller = new $controlerClass($action[1], $params);
+    var_dump($controller);
     $controller->init($action[1], $params);
 });
