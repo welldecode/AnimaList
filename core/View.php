@@ -32,7 +32,7 @@ class View
 	protected function renderView(string $viewScript)
 	{
 		ob_start();
-		include(dirname(__FILE__, 2) .  '\\views\\' .  $viewScript);
+		include(dirname(__FILE__, 2) .  '/views/' .  $viewScript);
 
 		$this->viewContent = ob_get_clean();
 	}
