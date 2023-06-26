@@ -14,13 +14,13 @@
 
         <?php
                 $i = 0;
-                foreach ($this->trending_now as $anime) :
+                foreach ($this->trending_now as $anime) : 
                 ?>
                     <article class="splide__slide anime_i" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00">
-                        <a href="toon/<?php echo $anime['slug'] ?>">
+                        <a href="toon/<?php echo $anime['info']['name'] ?>">
                             <figure class="thumb">
                              </figure>
-                            <h1 class="text"><?php echo $anime['name'] ?></h1>
+                            <h1 class="text"><?php echo $anime['info']['name'] ?></h1>
                             <div class="flex justify-between align-center">
                                 <h2>Original</h2>
                                 <h3>Dub | Leg</h3>

@@ -32,7 +32,7 @@ class View
 	protected function renderView(string $viewScript)
 	{
 		ob_start();
-		include(dirname(__FILE__, 2) .  '\\views\\' .  $viewScript);
+		include(dirname(__FILE__, 2) .  '/views/site/' .  $viewScript);
 
 		$this->viewContent = ob_get_clean();
 	}
@@ -47,7 +47,7 @@ class View
 			echo $this->viewContent;
 		} else {
 			
-			include(dirname(__FILE__, 2) . '\\views\\site\\' .$this->getLayout() . '.php'); 
+			include(dirname(__FILE__, 2) . '/views/site/layout.php');
 		}
 	}
 
@@ -55,7 +55,7 @@ class View
 	{
 		$name   = (string) $name;
 		if ('' !== $name) {
-			$templates = dirname(__FILE__, 2) . '\\views\\site\\partials\\' . $name . '.php';
+			$templates = dirname(__FILE__, 3) . '\\views\\partials\\site\\' . $name . '.php';
 		}
 		if (file_exists($templates)) {
 			return require($templates);
