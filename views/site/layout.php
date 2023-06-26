@@ -17,6 +17,7 @@
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Social</a></li>
+          <li><a href="#">Forum</a></li>
         </ul>
         <div class="right_social">
           <a href="#">Login</a>
