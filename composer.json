@@ -14,7 +14,9 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "calcinai/php-imagick": "^0.1.2",
+        "intervention/image": "^2.7"
     },"config": {
         "platform":{
           "ext-imagick": "3.4.4"

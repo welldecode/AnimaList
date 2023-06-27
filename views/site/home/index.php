@@ -1,5 +1,12 @@
 <main>
 
+    <section class="top container">
+        <div class="top_content">
+            <h1>A nova plataforma de anime da próxima geração</h1>
+            <span>Acompanhe, compartilhe e descubra seus animes e mangás favoritos com o AnimaList.</span>
+        </div>
+    </section>
+
     <section class="dashboard_container">
         <div class="container">
             <div class="dashboard_content">
@@ -44,28 +51,25 @@
                 <div class="right_info">
                     <div class="title_dashboard">Artigos em Destaque</div>
 
-                    <article class="news-unit">
-                        <a href="#">
-                            <h1>O que fez do Wonder Egg Priority um anime tão especial, parte 1</h1>
-                            <p>Wonder Egg Priority é a primeira série de anime criada pelo roteirista de drama de televisão, Shinji Nojima. É um espetáculo único imbuído da paixão de sua jovem equipe de criadores. Nesta entrevista especial, perguntamos à equipe principal da série o que tornou o Wonder Egg Priority tão notável.</p>
-                            <ul class="author-news">
-                                <li>Por <span>Febri</span></li>
-                                <li>50k Views</li>
-                                <li>Spoiler</li>
-                            </ul>
-                        </a>
-                    </article>
                 </div>
             </div>
         </div>
     </section>
-    <section class="top container">
-        <div class="top_content">
-            <h1>A nova plataforma de anime da próxima geração</h1>
-            <span>Acompanhe, compartilhe e descubra seus animes e mangás favoritos com o AnimaList.</span>
+    <section class="descutions">
+        <div class="container">
+            <article class="news-unit">
+                <a href="#">
+                    <h1>O que fez do Wonder Egg Priority um anime tão especial, parte 1</h1>
+                    <p>Wonder Egg Priority é a primeira série de anime criada pelo roteirista de drama de televisão, Shinji Nojima. É um espetáculo único imbuído da paixão de sua jovem equipe de criadores. Nesta entrevista especial, perguntamos à equipe principal da série o que tornou o Wonder Egg Priority tão notável.</p>
+                    <ul class="author-news">
+                        <li>Por <span>Febri</span></li>
+                        <li>50k Views</li>
+                        <li>Spoiler</li>
+                    </ul>
+                </a>
+            </article>
         </div>
     </section>
-
     <section class="trending container">
         <div class="titles">
             <h1>Tendência agora</h1>
@@ -82,7 +86,8 @@
                         <article class="splide__slide anime_i" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00">
                             <a href="toon/<?php echo $anime['slug'] ?>">
                                 <figure class="thumb">
-                                    <img src="/public/uploads/<?= $anime['slug'] . ".jpg" ?>" alt="">
+                                <img src="<?= \core\Images::load_image($anime['slug'] . ".jpg", 255, 350) ?>" alt="">
+                           
                                 </figure>
                                 <h1 class="text"><?php echo $anime['info']['name'] ?></h1>
 
