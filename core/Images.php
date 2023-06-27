@@ -50,7 +50,7 @@ class Images
             return file_get_contents(self::pathCache($imagePath));
         }
 
-        $path = dirname(__FILE__, 3);
+        $path = dirname(__FILE__,2);
 
         $img = new Imagick($path . "/public/img/" . $imagePath);
 
