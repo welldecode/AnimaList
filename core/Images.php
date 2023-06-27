@@ -2,8 +2,8 @@
 
 namespace core;
 
-use Intervention\Image\ImageManager;
-use Intervention\Image\ImageManagerStatic as Image;
+use \Imagick;
+
 
 class Images
 {
