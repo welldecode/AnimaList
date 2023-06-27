@@ -40,7 +40,7 @@ header {
 }
 
 .container {
-  width: unquote('min(100% - 20px, 1480px)');
+  width: unquote('min(100% - 20px, 1300px)');
   margin-inline: auto;
   position: relative;
 }
@@ -51,4 +51,25 @@ header {
   -webkit-line-clamp: 1;
   line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+
+.splide__pagination li {
+  display: none !important;
+}
+
+.splide__arrow {
+  background: $color-01;
+  height: 4em;
+  width: 4em;
+}
+
+.splide__arrow svg {
+  fill: $color-03;
+  height: 2.2em;
+  width: 2.2em;
+}
+
+footer {
+  margin-top: 10rem;
 }

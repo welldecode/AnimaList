@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $this->getTitlePage(); ?></title>
-  <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="public/css/libs.css">
+  <link rel="stylesheet" href="public/css/style.css"> 
 </head>
 
 <body>
@@ -28,6 +28,8 @@
   </header>
   <?php echo $this->viewContent(); ?>
 
+  <footer> 
+  </footer>
   <script src="public/js/libs.js"></script>
   <script src="public/js/main.js"></script>
 </body>

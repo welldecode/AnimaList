@@ -1,3 +1,59 @@
+.dashboard_container {
+  margin-bottom: 8rem;
+  .dashboard_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    .title_dashboard {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 1rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-01;
+    }
+    .left_info {
+      width: calc(100% - 30%);
+    }
+
+    .right_info {
+      width: 50%;
+
+      .news-unit {
+        a {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          p {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 500;
+          }
+          h1 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffe73e;
+          }
+        }
+
+        .author-news {
+          display: flex;
+          gap: 10px;
+
+          li {
+            font-size: 14px;
+color: #c7cfdd;
+            span {
+            color: $color-03;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .top_content {
   display: flex;
   align-items: center;
@@ -7,10 +63,11 @@
   margin: 0 0 9rem 0;
   h1 {
     font-size: 38px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1px;
     color: $color-04;
     text-align: center;
+    font-family: 'Syne';
   }
   span {
     font-size: 18px;
@@ -23,7 +80,7 @@
   }
 }
 .titles {
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
   h1 {
     font-size: 34px;
     font-weight: 700;
@@ -36,14 +93,15 @@
 
     font-weight: 500;
   }
-} 
-.anime_i { 
-  transition: all 0.5s; 
-  overflow: hidden;
+}
+.anime_i {
+  width: 100%;
+  transition: all 0.5s;
+  padding: 10px;
   position: relative !important;
 
   &:hover {
-    background-color: var(--color-01);
+    background-color: $color-01;
   }
 
   .thumb {
@@ -51,6 +109,7 @@
     overflow: hidden;
     position: relative;
 
+    border-radius: 2px;
     &:hover img {
       transform: scale(1.1);
     }
@@ -66,40 +125,86 @@
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
       object-fit: cover;
-      border-radius: 5px;
+      border-radius: 2px;
     }
   }
 
   h1 {
     padding: 15px 0;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
   }
 
-  .info_footer h2 {
-    font-size: 14px;
-    margin: 15px 0 0 0;
-    font-weight: 500;
-    color: var(--color-03);
-    border-radius: 2px;
-    display: inline-block;
-  }
+  &:hover .info_card {
+    z-index: 999999999999999;
+    position: absolute;
+    top: 0;
+    right: -18rem;
+    opacity: 1;
+    background: $color-01;
+    padding: 15px;
+    height: 250px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
 
-  .info_footer h3 {
-    font-size: 13px;
-    margin: 15px 0 0 0;
-    font-weight: 500;
-    color: #a4a4a4;
-    border-radius: 2px;
-    display: inline-block;
-    background: var(--color-01);
-    padding: 4px 10px;
-    transition: all 0.3s !important;
+    box-shadow: 3px 11px 20px 0px rgba(38, 47, 71, 0.7);
   }
+  .info_card {
+    position: relative;
+    opacity: 0;
+    display: none;
+    -webkit-animation: fade 0.3s;
+    animation: fade 0.3s;
 
-  .info_footer:hover h3 {
-    background-color: var(--color-03);
-    border-radius: 2px;
-    color: $color-03;
+    .top_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      .gerens {
+        display: flex;
+        gap: 10px;
+
+        li {
+          font-size: 14px;
+          color: $color-02;
+        }
+      }
+
+      .eps {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        span {
+          color: #a7b1be;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #eaeef3;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
   }
 }
