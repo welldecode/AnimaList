@@ -8,42 +8,7 @@ use \Imagick;
 class Images
 {
 
-    public static function  create_image(string $imagePath, int $width = 250, int  $height = 250)
-    {
-
-        $source = dirname(__FILE__, 2) . "/public/img/" . $imagePath;
-
-        $dir = pathinfo($source, PATHINFO_DIRNAME);
-        $name = pathinfo($source, PATHINFO_FILENAME);
-
-        $info = getimagesize($source);
-
-        Image::configure(['driver' => 'gd']);
-
-        $image = Image::make($source)->resize($width, $height);
-
-        $image
-            ->resize(
-                $width,
-                $height,
-                function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                }
-            );
-        // Add a background canvas to the image
-        $image
-            ->resizeCanvas(
-                $width,
-                $height,
-                'center', // centre the image on the canves
-                false, // don't apply relative mode 
-                '#FFA500' // add a white background to the image
-            );
-
-        $image->save(dirname(__FILE__, 2) . "/public/uploads/" . $name . ".webp");
-        print_r($image);
-    }
+     
 
     public static function load_image(string $imagePath, int $width = 250, int  $height = 250) { 
         if (self::hasCache($imagePath)) {
