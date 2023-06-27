@@ -86,8 +86,7 @@
                         <article class="splide__slide anime_i" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00">
                             <a href="toon/<?php echo $anime['slug'] ?>">
                                 <figure class="thumb">
-                                <img src="<?= \core\Images::load_image($anime['slug'] . ".jpg", 255, 350) ?>" alt="">
-                           
+                                <img src="data:image/webp;charset=utf-8;base64,<?= \core\Images::load_image($anime['slug'] . ".jpg", 255, 350) ?>" alt="">
                                 </figure>
                                 <h1 class="text"><?php echo $anime['info']['name'] ?></h1>
 

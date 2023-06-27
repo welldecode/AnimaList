@@ -15,11 +15,12 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^5.5",
-        "calcinai/php-imagick": "^0.1.2",
-        "intervention/image": "^2.7"
-    },"config": {
-        "platform":{
-          "ext-imagick": "3.4.4"
-          }
-      }
+        "intervention/image": "^2.7",
+        "intervention/imagecache": "^2.6" 
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": false
+        }
+    }
 }

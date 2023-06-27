@@ -6,7 +6,7 @@ use core\Router\Dispatcher;
 require './vendor/autoload.php'; 
 session_start();
 ini_set('display_errors', 1);
-
+ 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__, 1));
 $dotenv->load();
  
