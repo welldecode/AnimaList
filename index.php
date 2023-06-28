@@ -10,7 +10,7 @@ date_default_timezone_set('America/Sao_Paulo');
 error_reporting(0);
 session_start();
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors',0);
  
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__, 1));
 $dotenv->load();
