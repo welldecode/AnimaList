@@ -1,44 +1,174 @@
 header {
   position: relative;
-  background-color: $color-01;
-  margin-bottom: 8rem;
-  nav {
-    height: 80px;
+  .container {
+    width: unquote('min(100% - 20px, 1300px)');
+  }
+  margin-bottom: 5rem;
+  .nav {
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     h1 {
       letter-spacing: 0.5px;
       color: #fff;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
       font-family: 'Syne', sans-serif;
+      margin-right: 25px;
     }
+    .menu-open {
+      font-size: 30px;
+      cursor: pointer;
+      transition: all 0.5s;
+      color: $color-02;
 
-    ul {
-      font-size: 18px;
-      font-weight: 500;
+      &:hover {
+        color: $color-03;
+      }
+    }
+    .left_menu {
       display: flex;
       align-items: center;
       gap: 25px;
-      margin-left: -100px;
+
+      .search-icon {
+        position: relative;
+        input {
+          width: 20rem;
+          color: #fff;
+          background-color: $color-01;
+          border: 1px solid #3d3f42;
+          padding: 15px 40px 15px 15px;
+          border-radius: 10px;
+        }
+
+        i {
+          position: absolute;
+          font-size: 22px;
+          color: #fff;
+          top: 11px;
+          right: 15px;
+        }
+        :focus {
+          outline: none;
+        }
+      }
     }
 
     .right_social {
+      display: flex;
+      align-items: center;
+      gap: 25px;
       a:first-child {
-        color: $color-01;
+        color: #fff;
         background-color: $color-02;
-        padding: 8px 25px;
+        padding: 5px 25px;
         border-radius: 5px;
-        transition: all .5s;
-        &:hover { 
+        transition: all 0.5s;
+        &:hover {
           background-color: $color-03;
+        }
+      }
+
+      .user-btn {
+        border-radius: 50px;
+        .img-avatar {
+          font-size: 26px;
+          color: #fff;
         }
       }
     }
   }
 }
+.aside_menu {
+  position: relative;
+  z-index: 155555;
+  left: -270px;
+  transition: left 0.5s ease;
 
+  &.active {
+    left: 0;
+  }
+  .aside_menu_container {
+    position: fixed;
+    height: 100vh;
+    background: $color-01;
+    width: 265px;
+    top: 0;
+    z-index: 11111;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    .aside_menu_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 35px 15px 15px;
+      font-size: 23px;
+      padding-left: 25px;
+      font-weight: 800; 
+      color:#fff;
+      .aside_menu_content_close {
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.5s;
+        color: $color-03;
+        &:hover {
+          color: $color-03;
+        }
+      }
+    }
+    .aside_menu_rows {
+      padding: 15px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      .menu-side {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        nav {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          a {
+            display: block;
+            transition: 0.2s;
+            font-weight: 500;
+            font-size: 16px;
+            &:hover {
+              color: $color-03;
+            }
+          }
+          .menu_active {
+            color: $color-03;
+            background: $color-01;
+            font-weight: 700;
+          }
+        }
+      }
+      .aside_menu_title {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        gap: 15px;
+        i {
+          font-size: 22px;
+          color: #fff;
+        }
+        .title {
+          font-weight: 600;
+          font-size: 22px;
+          letter-spacing: 1.2px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 .container {
   width: unquote('min(100% - 20px, 1300px)');
   margin-inline: auto;
@@ -48,11 +178,10 @@ header {
 .text {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
 
 .splide__pagination li {
   display: none !important;

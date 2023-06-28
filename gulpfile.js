@@ -39,6 +39,8 @@ function pluginJS() {
   return gulp
     .src([ 
       "libs/splide/splide.min.js",  
+      "libs/jquery/jquery.min.js",  
+      "libs/aos/aos.js",  
     ])
     .pipe(concat("libs.js"))
     .pipe(gulp.dest("public/js/"))
@@ -51,6 +53,7 @@ function pluginCSS() {
   .src([
     'libs/splide/splide.min.css',
     'libs/splide/splide-core.min.css',
+    'libs/aos/aos.css',
  
   ])
   .pipe(concat('libs.css'))
@@ -68,17 +71,8 @@ function watch() {
   gulp.watch(["*.html"]).on("change", browserSync.reload);
 }
 gulp.task("watch", watch);
-
-function browser() {
-  browserSync.init({
-    server: {
-      baseDir: "./",
-    },
-  });
-}
-
-gulp.task("browser-sync", browser);
+ 
 gulp.task(
   "default",
-  gulp.parallel("watch", "browser-sync", "libscss", "libsjs", "minjs", "minsass")
+  gulp.parallel("watch",  "libscss", "libsjs", "minjs", "minsass")
 );

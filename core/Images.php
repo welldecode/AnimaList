@@ -7,8 +7,7 @@ use \Imagick;
 
 class Images
 {
-
-     
+ 
 
     public static function load_image(string $imagePath, int $width = 250, int  $height = 250) { 
         if (self::hasCache($imagePath)) {

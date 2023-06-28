@@ -55,7 +55,7 @@ class View
 	{
 		$name   = (string) $name;
 		if ('' !== $name) {
-			$templates = dirname(__FILE__, 3) . '\\views\\partials\\site\\' . $name . '.php';
+			$templates = dirname(__FILE__, 2) . '\\views\\site\\partials\\' . $name . '.php';
 		}
 		if (file_exists($templates)) {
 			return require($templates);
