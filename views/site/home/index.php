@@ -6,24 +6,51 @@
                 <h1>Últimas notícias</h1>
                 <ul>
                     <li>
-                        <figure>
-                            <img src="https://a.storyblok.com/f/178900/1120x630/31ac54539f/feiticeira-da-tempestade.jpg/m/576x0/filters:quality(100)" alt="">
-                        </figure>
-                        <span>#Peça de teatro de Fruits Basket revela imagens do elenco em seus trajes</span>
+                        <a href="#">
+                            <figure>
+                                <img src="https://a.storyblok.com/f/178900/1120x630/31ac54539f/feiticeira-da-tempestade.jpg/m/576x0/filters:quality(100)" alt="">
+                            </figure>
+                            <span>#Peça de teatro de Fruits Basket revela imagens do elenco em seus trajes</span>
+                        </a>
                     </li>
                     <li>
-                        <figure>
-                            <img src="https://a.storyblok.com/f/178900/1920x1080/5b55c9aabb/link-click-season-2-ultimate-pv.png/m/576x0/filters:quality(100)" alt="">
-                        </figure>
-                        <span>#Novo trailer da 2ª temporada de Link Click apresenta personagem misterioso</span>
-                    </li>
+                        <a href="#">
+                            <figure>
+                                <img src="https://a.storyblok.com/f/178900/1920x1080/5b55c9aabb/link-click-season-2-ultimate-pv.png/m/576x0/filters:quality(100)" alt="">
+                            </figure>
+                            <span>#Novo trailer da 2ª temporada de Link Click apresenta personagem misterioso</span>
+                        </a>
+                    </li> 
                     <li>
-                     
-                        <span>#Peça de teatro de Fruits Basket revela imagens do elenco em seus trajes</span>
+                        <a href="#">
+                            <figure>
+                                <img src="https://a.storyblok.com/f/178900/1920x1080/835c221b2c/akane-oshi-no-ko.png/m/576x0/filters:quality(100)" alt="">
+                            </figure>
+                            <span>#Segunda temporada de Oshi no Ko é anunciada</span>
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="grid_main">
+                <h1>Verão 2023 Anime</h1>
+                
+                <div class="main_t">
+                    <?php
+                    $i = 0;
+                    foreach ($this->trending_now as $anime) :
+                    ?>
+                        <article class="splide__slide anime_card" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00">
+                            <a href="toon/<?php echo $anime['slug'] ?>">
+                                <figure class="thumb">
+                                    <img src="public/img/<?php echo $anime['slug'] ?>.jpg" alt="">
+                                </figure>
+                                <h1 class="text"><?php echo $anime['info']['name'] ?></h1>
+ 
+                            </a>
+                        </article>
+                    <?php $i++;
+                    endforeach ?>
+                </div>
                 <h1>Tópicos Ativos Recentemente</h1>
                 <div class="main_cards">
                     <article class="banner_carousel">
@@ -31,36 +58,17 @@
                             <figure>
                                 <img src="https://a.storyblok.com/f/178900/1504x846/9433cb3713/horimiya-season-one-finale.jpg/m/576x0/filters:quality(100)" alt="">
                             </figure>
-
-                            <h1>O que é Horimiya: The Missing Pieces? Explicamos o anime de romance para você</h1>
                             <div class="gerens">
                                 <span>Guias</span>
                             </div>
+                            <h1>O que é Horimiya: The Missing Pieces? Explicamos o anime de romance para você</h1>
+                            <span>Jun 25, 2023 1:00 PM -03</span>
                         </a>
                     </article>
                 </div>
+ 
             </div>
-            <div class="grid_end">
-                <h1>Artigos</h1>
-                <ul>
-                    <li>
-                        <figure>
-                            <img src="https://a.storyblok.com/f/178900/1120x630/31ac54539f/feiticeira-da-tempestade.jpg/m/576x0/filters:quality(100)" alt="">
-                        </figure>
-                        <span>#Peça de teatro de Fruits Basket revela imagens do elenco em seus trajes</span>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="https://a.storyblok.com/f/178900/1920x1080/5b55c9aabb/link-click-season-2-ultimate-pv.png/m/576x0/filters:quality(100)" alt="">
-                        </figure>
-                        <span>#Novo trailer da 2ª temporada de Link Click apresenta personagem misterioso</span>
-                    </li>
-                    <li>
-                     
-                        <span>#Peça de teatro de Fruits Basket revela imagens do elenco em seus trajes</span>
-                    </li>
-                </ul>
-            </div>
+
         </div>
     </section>
 

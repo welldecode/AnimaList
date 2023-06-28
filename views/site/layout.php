@@ -14,11 +14,11 @@
 <body>
   <header>
     <div class="container">
-      <div class="nav"> 
+      <div class="nav">
         <div class="left_menu">
-        <div class="menu-open">
-          <i class="ri-menu-line"></i>
-        </div>
+          <div class="menu-open">
+            <i class="ri-menu-5-fill"></i>
+          </div>
           <h1>AnimaList</h1>
           <div class="search-icon">
             <input type="search" placeholder="Pesquise por seu anime...">
@@ -27,7 +27,7 @@
         </div>
 
         <div class="right_social">
-          <a href="#">Login</a>
+          <a href="#">Forum</a>
 
           <div class="user-btn">
             <div class="img-avatar">
